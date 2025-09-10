@@ -61,7 +61,7 @@ This project utilizes data from LTA DataMall and the OneMap API to create a stat
 Ensure that you are in your project root directory.
 
 1. **Fetch the data**  
-    Download carpark data from LTA and save it as a CSV (repeat only when you need updated data).
+    Download carpark data from LTA and save it as a CSV (repeat when you need updated data).
     ```bash
     python -m src.api.fetch_data
     ```
