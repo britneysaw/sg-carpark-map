@@ -1,0 +1,13 @@
+# Virtual environment
+venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Ignore sensitive config files
+config/config.env
+config/token_cache.json
+
+# Ignore fetched data file
+data/carpark_data.csv
