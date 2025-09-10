@@ -11,9 +11,10 @@ This project utilizes data from LTA DataMall and the OneMap API to create a stat
 - **Location Search:** Finds the nearest carparks to a user-input destination address using the OneMap API.
 
 ## Directory
-.
-├── LICENSE
-├── README.md
+```
+.  
+├── LICENSE  
+├── README.md  
 ├── sample_output # Sample output files for the carpark maps.
 │   ├── carpark_map.html 
 │   ├── nearest_carparks_map.html
@@ -32,13 +33,14 @@ This project utilizes data from LTA DataMall and the OneMap API to create a stat
     └── services
         ├── auth_service.py # Handles authentication for OneMap and LTA APIs.
         └── map_utils.py # Geocoding and routing utilities.
+```
 
 ## Setup and Installation
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository_url>
-    cd <repository_name>
+    git clone https://github.com/britneysaw/sg-carpark-map.git
+    cd sg-carpark-map
     ```
 
 2.  **Install dependencies:**
@@ -56,16 +58,29 @@ This project utilizes data from LTA DataMall and the OneMap API to create a stat
         ```
 
 ## Usage
-#### Step 1: Fetch the data
-Run `python -m src.api.fetch_data` from the project root directory to download carpark data from LTA and save it as a CSV. This step only needs to be repeated to fetch updated data.
+Ensure that you are in your project root directory.
 
-#### Step 2a: Explore the Carpark Map
-Generates an interactive map of all carparks with togglable layers and a heatmap.
-Run `python -m src.map.create_map`. The generated map will be saved as `carpark_map.html` in your project's root directory.
+1. **Fetch the data**  
+    Download carpark data from LTA and save it as a CSV (repeat only when you need updated data).
+    ```bash
+    python -m src.api.fetch_data
+    ```
 
-#### Step 2b: Find Nearest Carparks
-Uses geocoding to find carparks closest to a given address.
-Run `python -m src.map.find_nearest`. The script will prompt for an address and number of carparks to find. The generated map will be saved as `nearest_carparks_map.html` in your project's root directory.
+2. **Choose a workflow**  
+    **A) Explore the Carpark Map**  
+    Generates an interactive map of all carparks with togglable layers and a heatmap.  
+    ```bash
+    python -m src.map.create_map
+    ```
+    The generated map will be saved as `carpark_map.html` in your project's root directory.
+
+    **B) Find Nearest Carparks**  
+    Uses geocoding to find carparks closest to a given address.  
+    ```bash
+    python -m src.map.find_nearest
+    ```
+    The script will prompt for an address and number of carparks to find.  
+    The generated map will be saved as `nearest_carparks_map.html` in your project's root directory.
 
 Open the saved html files in your web browser to view the maps.
 
