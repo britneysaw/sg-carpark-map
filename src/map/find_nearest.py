@@ -43,7 +43,7 @@ def create_nearest_carpark_map(carpark_df, destination_coords, destination_addre
     folium.Marker(
         location=destination_coords,
         popup=folium.Popup(f"Your Destination: {destination_address}", parse_html=True),
-        icon=folium.Icon(color="red", icon="info-sign")
+        icon=folium.Icon(color="darkblue", icon="location-dot", prefix="fa")
     ).add_to(m)
 
     # Define FeatureGroups and MarkerClusters for each lot type
