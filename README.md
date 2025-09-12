@@ -1,6 +1,6 @@
 # Singapore Carpark Availability Map
 
-This project creates a map of carpark availability across Singapore, using data from LTA DataMall and the OneMap API.
+This project utilizes data from LTA DataMall and the OneMap APi to create a map of Singapore showing carpark availability.
 
 
 ## Features
